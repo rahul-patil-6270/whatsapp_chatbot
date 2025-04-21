@@ -2,7 +2,7 @@ from flask import Flask,request
 from googlesearch import search 
 from twilio.twiml.messaging_response import MessagingResponse
 
-app = Flask(_name_)
+app = Flask(__name__)
 @app.route("/", methods=["POST"])
 def bot():
     user_msg = request.values.get('Body', '').lower()
@@ -14,5 +14,5 @@ def bot():
         msg.body(res)  
     return str(response)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run()
