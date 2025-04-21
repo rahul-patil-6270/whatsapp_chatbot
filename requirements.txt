@@ -1,3 +1,4 @@
 Flask 
 twilio 
 googlesearch-python
+gunicorn
